@@ -1,3 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'sinatra'
+  gem 'oauth2'
+end
+
 require 'sinatra'
 require 'oauth2'
 
@@ -22,3 +32,5 @@ def client
     :token_url => 'https://www.strava.com/oauth/token'
   })
 end
+
+Sinatra::Application.run!
