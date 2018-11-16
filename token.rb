@@ -33,4 +33,6 @@ def client
   })
 end
 
+puts "Open http://localhost:#{port}/ in browser"
+
 Sinatra::Application.run!
