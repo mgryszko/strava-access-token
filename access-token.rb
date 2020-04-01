@@ -16,7 +16,7 @@ port = 8080
 set :port, port
 
 get '/' do
-  redirect client.auth_code.authorize_url({:redirect_uri => "http://localhost:#{port}/auth", :scope => 'activity:read_all'})
+  redirect client.auth_code.authorize_url({:redirect_uri => "http://localhost:#{port}/auth", :scope => 'read_all,profile:read_all,activity:read_all,activity:write'})
 end
 
 get '/auth' do
