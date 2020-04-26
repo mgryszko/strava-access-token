@@ -28,7 +28,7 @@ set :port, port
 
 get '/' do
   client = strava_oauth_client(client_id, client_secret)
-  redirect client.auth_code.authorize_url({:redirect_uri => "http://localhost:#{port}/auth", :scope => 'read_all,profile:read_all,activity:read_all,activity:write'})
+  redirect client.auth_code.authorize_url({:redirect_uri => "http://localhost:#{port}/auth", :scope => 'read,read_all,profile:read_all,profile:write,activity:read,activity:read_all,activity:write'})
 end
 
 get '/auth' do
