@@ -25,5 +25,9 @@ brew install strava-access-token
 strava-access-token <client_id> <client_secret>
 ```
 
-If you don't have a client id/secret, register you app following the official [Strava documentation](https://developers.strava.com/docs/getting-started/#account)
+If you don't have a client id/secret, register your app following the official [Strava documentation](https://developers.strava.com/docs/getting-started/#account).
+
+The script starts a local server (acting as an OAuth2 client) listening on port 8080.
+
+Open your http://localhost:8080/ in your browser and authenticate against Strava. Access token will be displayed in the browser and downloaded to the current working directory as `.access-token` .
 
