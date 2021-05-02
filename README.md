@@ -44,5 +44,5 @@ rbenv local <ruby_version>
 ### Run
 
 ```shell script
-rbenv exec strava-access-token <client_id> <client_secret>
+rbenv exec ruby strava-access-token <client_id> <client_secret>
 ```
